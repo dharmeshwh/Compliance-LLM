@@ -89,7 +89,7 @@ class LangchainService {
 
       // Create a prompt for the comparison using ChatPromptTemplate.
       const prompt = ChatPromptTemplate.fromTemplate(
-        `Check the compliance of the following webpage based only on the provided context:\n<context>{context}</context>\nwebpage: {input}`
+        `Check the compliance of the following webpage based only on the provided context:\n<context>{context}</context>\nwebpage: {input}\n`
       );
 
       // Create a chat model using ChatOpenAI.

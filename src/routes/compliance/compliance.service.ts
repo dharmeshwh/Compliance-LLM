@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import { CheerioWebBaseLoader } from "langchain/document_loaders/web/cheerio";
 import { langchainService } from "../../services/langchain.service";
-import { convert } from "html-to-text";
 
 /**
  * Service class responsible for handling compliance-related operations.
@@ -32,7 +31,7 @@ export class ComplianceService {
 
       // Convert the HTML content of the first document to text and compare it using LangchainService.
       const splitedDocs = await langchainService.compare(
-        convert(documents[0].pageContent)
+        documents[0].pageContent
       );
 
       // Send a successful response with the compliance check result.
