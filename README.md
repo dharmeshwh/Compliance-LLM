@@ -39,3 +39,19 @@ Start the project in development mode using the following command:
 ```bash
 npm run dev
 ```
+
+# POST Request
+
+## Endpoint
+
+**URL:** `http://18.221.58.137/check-policy`
+
+## Request Body
+
+The POST request requires the following fields in the request body:
+
+```json
+{
+  "webpageUrl": "string" // url
+}
+```
