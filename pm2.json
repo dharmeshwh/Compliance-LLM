@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "compliance-service",
+      "script": "./dist/index.js",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "max_memory_restart": "1G",
+      "node_args": ["--max_old_space_size=4096"]
+    }
+  ]
+}
